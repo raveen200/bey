@@ -1,0 +1,369 @@
+// Import Bootstrap
+
+
+// Variables
+$primary-color: #0864B1
+$secondary-color: #133341
+$text-color: #333
+$light-bg: #f8f9fa
+$dark-bg: #707070
+$transparent-bg: #00000000
+
+// Global Styles
+body 
+  color: $text-color
+  font-family: 'Biko', sans-serif
+
+
+// Navigation
+.navbar 
+  // background: transparent
+  position: absolute
+  width: 100%
+  z-index: 1000
+  padding: 1rem 0
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), $transparent-bg)
+
+  .navbar-logo
+    width: 50px
+    height: 50px
+    margin-right: 1rem
+
+  .nav-btn
+    background-color: $primary-color
+    border: none
+    color: white
+    
+    &:hover
+      background-color: $secondary-color
+
+ 
+
+.title-underlined
+  position: relative
+  display: inline-block
+  padding-bottom: 8px
+
+ 
+
+  &::after
+    content: ''
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 0
+    width:80%
+    height: 4px
+    background-color: #524e63
+
+ 
+
+
+
+// Hero Section
+.hero 
+  background: $primary-color
+  color: white
+  position: relative
+  overflow: hidden
+  
+  &::before 
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: url('/img/Hero Background Shape.svg') no-repeat
+    opacity: 0.8
+    
+  
+  
+  h1 
+    font-size: 3.5rem
+    font-weight: bold
+    margin-bottom: 1.5rem
+  
+  
+  .hero-text 
+    font-size: 1.2rem
+    opacity: 0.9
+    max-width: 500px
+
+  
+  .img-fluid
+    opacity: 0.6
+    object-fit: cover
+    
+
+
+    
+
+  .text-overlay
+    position: absolute
+    top: 35%
+    left: 10%
+    color: white
+
+
+    h1, .hero-text
+      margin: 0
+  
+  
+// About Section
+.about 
+  padding: 100px 0 50px 0
+  background: $light-bg
+
+  .about-title
+    font-size: 2rem
+    font-weight: bold
+    margin-bottom: 1rem
+    color: $primary-color
+    
+  .about-text 
+    max-width: 90%
+    font-size:  25px
+  
+    margin: 2rem auto
+    line-height: 1.8
+  
+
+// News Section
+.news 
+  margin: 100px 0
+  padding: 0 20px
+.news-group 
+  display: flex
+
+.news-group.active 
+  display: flex
+
+.news-title
+  
+  font-size: 2rem
+  font-weight: bold
+  margin-bottom: 1rem
+  color: $primary-color
+
+.news-card 
+  margin: 20px
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1)
+  border-radius: 10px
+  overflow: hidden
+  width: calc(33.33% - 20px)
+
+.news-content
+  .read-more 
+    font-size: 1.2rem
+    display: flex
+    justify-content: flex-end
+    margin-top: 1rem
+    color: $primary-color
+    cursor: pointer
+    text-decoration: none
+  .arrow 
+    margin-left: 30px
+
+
+
+.news-card img 
+  width: 100%
+  height: 150px
+  object-fit: cover
+
+
+.news-card .news-content 
+  padding: 20px
+
+
+.news-card .news-content .news-card-title 
+  font-size: 18px
+  font-weight: bold
+  margin-bottom: 10px
+
+
+.news-card .news-content .news-card-text 
+  font-size: 14px
+  color: #666
+
+.news-progress-dots 
+  display: flex
+  justify-content: center
+  gap: 8px
+  margin-top: 2rem
+
+  .dot 
+    width: 30px
+    height: 4px
+    background-color: rgba($primary-color, 0.2)
+    border-radius: 2px
+    transition: all 0.3s ease
+
+    &.active 
+      background-color: $primary-color
+      width: 45px
+
+
+  // Testimonials Section
+.testimonials 
+  padding: 100px 0 50px 0
+  background: $light-bg
+
+  .testimonial-coma
+    font-size: 2.5rem
+    color: $primary-color
+
+
+  .testimonial-author
+    font-size: 1.2rem
+    font-weight: bold
+    color: $primary-color
+  
+
+  .testimonials-title
+    font-size: 2rem
+    font-weight: bold
+    margin-bottom: 1rem
+    color: $primary-color
+
+  .testimonial-coma 
+    font-size: 4rem
+    color: $primary-color
+    position: absolute
+
+
+  .testimonial-item 
+    position: relative
+    max-width: 800px
+    margin: 0 auto
+
+
+  .testimonial-item p 
+    position: relative
+    font-size: 1.2rem
+    font-style: italic
+    margin-bottom: 2rem
+
+
+  .testimonial-coma.align-self-end 
+    top: 0
+    right: 0
+    transform: translateY(-85%)
+
+
+  .testimonial-coma 
+    bottom: 0
+    // left: 0
+    transform: translateY(-25%)
+
+
+// Contact Section
+.contact 
+  padding: 50px 0 0 0
+ 
+
+  .contact-title
+    font-size: 2rem
+    font-weight: bold
+    margin-bottom: 1rem
+    color: $primary-color
+  
+  #map 
+    height: 400px
+    width: 100%
+    background: #eee
+    border-radius: 10px
+ 
+  
+// Footer
+.footer 
+  background: $secondary-color
+  color: white
+  padding: 50px 0 20px
+
+  .copyright-main
+    display: flex
+    justify-content: space-between
+
+  .navbar-logo
+    width: 50px
+    height: 50px
+    margin-right: 1rem
+
+  .logoNSocial
+    display: flex
+    justify-content: space-between
+  
+  h3 
+    margin-bottom: 1.5rem
+    font-size: 1.5rem
+
+  
+  .copyright 
+    margin-top: 50px
+    padding-top: 20px
+
+
+
+
+// Responsive Adjustments
+@media screen and (max-width: 768px)
+  .hero
+    padding: 120px 0 80px
+    .text-overlay
+      left: 0%
+    h1
+      font-size: 2.5rem
+
+  .testimonials .testimonial-coma.align-self-end
+      transform: translateY(-157%)
+  .news-card 
+    width: calc(100% - 20px)
+
+  .footer 
+    padding: 20px
+    .container 
+      display: flex
+      flex-direction: column
+      .logo
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 20px
+
+      .copyright
+        margin-top: 5px
+        padding-top: 5px
+        p 
+          font-size: 0.7rem
+
+    .logoNSocial
+      display: flex
+      flex-direction: column
+
+    .social-links-contaner
+      display: flex
+      flex-direction: column
+      justify-content: center
+      .social-links
+        display: flex
+
+
+  .navbar-logo 
+    width: 30px
+    height: 30px
+    margin-right: 0.5rem
+
+
+  h3 
+    font-size: 1.2rem
+    
+  
+  
+
+
+
+
+
+
